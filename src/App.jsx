@@ -35,6 +35,7 @@ const App = () => {
           <GenImage />
         </div>
       </div>
+      Hello 
     </>
   );
 };
