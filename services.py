@@ -19,16 +19,16 @@ HF_TOKEN = os.getenv('HF_TOKEN')
 pipe = StableDiffusionPipeline.from_pretrained(
     "CompVis/stable-diffusion-v1-4", 
     revision="fp16", 
-    torch_dtype=torch.float16,
+    torch_dtype=torch.float32,
     use_auth_token=HF_TOKEN
     )
 
-if torch.backends.mps.is_available():
-    device = "mps"
-else: 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+# if torch.backends.mps.is_available():
+#     device = "mps"
+# else: 
+#     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-pipe.to(device)
+pipe.to('cpu')
 
 
 async def generate_image(imgPrompt: _schemas.ImageCreate) -> Image: 
