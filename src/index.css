@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Google Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.soft-padding {
+    padding: 10px;
+}
+
+.content-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: dashed 2px #ccc;
+    border-radius: 10px;
+    position: relative;
+}
+
+.flex-col {
+    flex: 1;
+}
+
+.webcam-container {
+    width: 500px;
+    height: 375px;
+    position: relative;
+}
+
+.webcam {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.stack {
+    position: absolute;
+    inset: auto 10px 10px auto;
+}
