@@ -4,6 +4,7 @@ import { Button, Radio } from "antd";
 import * as buttonOptions from "./utils/button";
 import { getImage } from "./apis/huggingface";
 import { useState } from "react";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 function App() {
   const [image, setImage] = useState(null);
@@ -18,7 +19,7 @@ function App() {
       <div className="title">Stable Diffusion Generator for NFT assets</div>
       <div className="content-container">
         <div className="webcam-container">
-          {/* <Webcam className="webcam" /> */}
+          <Webcam className="webcam" />
           <div className="stack">
             <Button type="primary" onClick={onCapture}>
               Capture
@@ -57,6 +58,9 @@ function App() {
             optionType="button"
             buttonStyle="solid"
           />
+        </div>
+        <div className='flex-col'>
+          <WalletMultiButton />
         </div>
       </div>
     </div>
